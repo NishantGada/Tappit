@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,16 +18,16 @@
 
     <section>
         <div id="header">
-            <h2>FPO list</h2>
+            <h3>FPO list</h3>
             <div id="filters">
                 <div>
                     sort by:
-                    <select name="" id="">
-                        <option value="">All</option>
-                        <option value="">1</option>
-                        <option value="">3</option>
-                        <option value="">2</option>
-                        <option value="">4</option>
+                    <select name="" id="select_list" onchange="searchInput()">
+                        <option value="All">All</option>
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
                     </select>
                 </div>
 
@@ -152,5 +154,14 @@
             </table>
         </div>
     </section>
+
+    <script>
+        function searchInput() {
+            var input;
+            input = document.getElementById('select_list').value;
+            alert(input);
+        }
+    </script>
 </body>
+
 </html>
